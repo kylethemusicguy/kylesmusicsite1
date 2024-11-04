@@ -1,0 +1,60 @@
+body {
+    font-family: 'Comic Neue', sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: white;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px 20px;
+    background-color: #9c00fc;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #7205b5;
+}
+
+.game-container {
+    display: flex;                  /* Enables Flexbox */
+    flex-wrap: wrap;               /* Allows items to wrap to the next line */
+    justify-content: center;       /* Centers items horizontally */
+    gap: 20px;                     /* Space between items */
+    padding: 20px;                 /* Optional padding around the container */
+}
+
+.game-button {
+    background-color: #9c00fc;     /* Button background color */
+    color: white;                   /* Text color */
+    border: none;                   /* No border */
+    border-radius: 10px;           /* Rounded corners */
+    padding: 20px 30px;            /* Padding inside the button */
+    font-size: 16px;                /* Font size */
+    cursor: pointer;                /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+    width: 150px;                   /* Fixed width for buttons */
+    height: 100px;                  /* Fixed height for buttons */
+    display: flex;                  /* Use Flexbox for button content */
+    align-items: center;            /* Center content vertically */
+    justify-content: center;        /* Center content horizontally */
+    text-align: center;             /* Center text */
+    font-family: 'Comic Neue', sans-serif; /* Set font to Comic Neue */
+}
+
+.game-button:hover {
+    background-color: #7205b5;      /* Darker background color on hover */
+}
