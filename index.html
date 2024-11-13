@@ -3,90 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kyles stupid music site for the stupid passion project that is very stupid</title>
-    <!--tab title-->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>kyle's game launcher</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            background-color: black;
-            color: white;
             font-family: 'Comic Neue', sans-serif;
             text-align: center;
+            background-color: black;
+            color: white;
             margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        header, footer {
-            margin: 20px;
+        h1, h2 {
+            color: white;
         }
         nav {
-            background-color: #000000;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0;
+            margin-bottom: 20px;
         }
         nav a {
-            color: #ffcc00; /* Light yellow for links */
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 20px; /* Increased padding for square effect */
-            width: 100px; /* Fixed width for square button */
-            height: 100px; /* Fixed height for square button */
-            background-color: #000000;
-            border: 2px solid #ffcc00; /* Border to enhance the button */
-            border-radius: 10px; /* Slightly rounded corners */
-            display: flex; /* Centering the text inside the button */
-            align-items: center; /* Centering vertically */
-            justify-content: center; /* Centering horizontally */
-            transition: background-color 0.3s; /* Smooth hover effect */
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #9c00fc;
+            border-radius: 5px;
         }
         nav a:hover {
-            background-color: #333333; /* Darker shade on hover */
+            background-color: #7205b5;
         }
-        main ul {
-            list-style-type: none;
-            padding: 0;
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between tiles */
         }
-        main li {
-            margin: 10px 0;
+        .game-button {
+            background-color: #9c00fc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 20px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 150px; /* Fixed width for buttons */
+            height: 100px; /* Fixed height for buttons */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Comic Neue', sans-serif; /* Ensure font applies to buttons */
+        }
+        .game-button:hover {
+            background-color: #7205b5;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
-        <h1>Kyle's Music Streaming Website</h1>
-        <p>This is my GT project. Here, listen to some NPC Sunny 99.1 music or something because I can't put real good music— I mean rap music—because I have to keep all the music PG for school :/</p>
-    </header>
 
+    <h1>kyle's game launcher</h1>
+    <h2>make sure to refresh every day to ensure it's updated</h2>
+
+    <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <li><a href="https://example.com/request-form" target="_blank">Request a Song</a></li>
-        </ul>
+        <a href="https://forms.gle/Wz8LAw7eaokXZTTF6" target="_blank">Song Request</a>
+        <a href="https://kylethemusicguy.github.io/kylesgamelauncher/" target="_blank">Kyle's Game Launcher</a> <!--music site-->
+        <a href="https://kylethemusicguy.github.io/kylescopyrightissues/" target="_blank">!COPYRIGHT ISSUES!</a> 
     </nav>
 
-    <main>
-        <ul>
-            <li><a href="https://whyp.it/tracks/221480/back-in-black?token=2415u" target="_blank">Back in Black - AC/DC</a></li>
-            <li><a href="https://whyp.it/tracks/221164/shake-it-off?token=qOG2r" target="_blank">Shake It Off - Taylor Swift</a></li>
-            <li><a href="https://whyp.it/tracks/221479/gold-digger?token=r2jW0" target="_blank">Gold Digger - Kanye West</a></li>
-            <li><a href="https://whyp.it/tracks/221521/gods-country?token=b91EN" target="_blank">Gods Country - Blake Shelton</a></li>
-            <!-- Add more tracks here -->
-        </ul>
-    </main>
+    <!-- Game Launcher Section -->
+    <div id="game-launcher" class="game-container">
+    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221480/back-in-black?token=2415u')">Back In Black - AC/DC</button>
+    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221164/shake-it-off?token=qOG2r')">Shake It Off - Taylor Swift</button>
+    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221479/gold-digger?token=r2jW0')">Gold Digger - Kanye West</button>
+    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221521/gods-country?token=b91EN')">Gods Country - Blake Shelton</button>    
+    </div>
 
-    <footer>
-        <p>other sites i made because im very cool 😎:</p>  
-         <li><a href="https://notagamewebsite.w3spaces.com/" target="_blank">Kyle's Game Launcher</a></li>
-        <p>for copyright issues, visit this site:</p>
-        <li><a href="https://kylethemusicguy.github.io/kylescopyrightissues/" target="_blank">Copyright Issues</a></li>
-    </footer>
+    <script>
+        function launchGame(url) {
+            window.open(url, '_blank'); // Open game in a new tab
+        }
+    </script>
 </body>
 </html>
