@@ -83,15 +83,29 @@
 
     <!-- Game Launcher Section -->
     <div id="game-launcher" class="game-container">
-    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221480/back-in-black?token=2415u')">Back In Black - AC/DC</button>
-    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221164/shake-it-off?token=qOG2r')">Shake It Off - Taylor Swift</button>
-    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221479/gold-digger?token=r2jW0')">Gold Digger - Kanye West</button>
-    <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221521/gods-country?token=b91EN')">Gods Country - Blake Shelton</button>    
+        <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221480/back-in-black?token=2415u')">Back In Black - AC/DC</button>
+        <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221164/shake-it-off?token=qOG2r')">Shake It Off - Taylor Swift</button>
+        <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221479/gold-digger?token=r2jW0')">Gold Digger - Kanye West</button>
+        <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221521/gods-country?token=b91EN')">Gods Country - Blake Shelton</button>
+        <button class="game-button" onclick="launchRandomSong()">Random Song</button>
     </div>
 
     <script>
+        const songs = [
+            'https://whyp.it/tracks/221480/back-in-black?token=2415u',
+            'https://whyp.it/tracks/221164/shake-it-off?token=qOG2r',
+            'https://whyp.it/tracks/221479/gold-digger?token=r2jW0',
+            'https://whyp.it/tracks/221521/gods-country?token=b91EN'
+        ];
+
         function launchGame(url) {
             window.open(url, '_blank'); // Open game in a new tab
+        }
+
+        function launchRandomSong() {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            const randomSong = songs[randomIndex];
+            launchGame(randomSong);
         }
     </script>
 </body>
