@@ -29,7 +29,7 @@
         nav {
             margin-bottom: 20px;
         }
-        nav a {
+        nav a, nav button {
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -37,34 +37,13 @@
             padding: 10px 20px;
             background-color: #ed0505;
             border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: #ad0303;
-        }
-        .game-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Space between tiles */
-        }
-        .game-button {
-            background-color: #ed0505;
-            color: white;
             border: none;
-            border-radius: 10px;
-            padding: 20px 30px;
-            font-size: 16px;
             cursor: pointer;
+            font-family: 'Comic Neue', sans-serif;
+            font-size: 16px;
             transition: background-color 0.3s;
-            width: 150px; /* Fixed width for buttons */
-            height: 100px; /* Fixed height for buttons */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: 'Comic Neue', sans-serif; /* Ensure font applies to buttons */
         }
-        .game-button:hover {
+        nav a:hover, nav button:hover {
             background-color: #ad0303;
         }
     </style>
@@ -77,8 +56,9 @@
     <!-- Navigation Bar -->
     <nav>
         <a href="https://forms.gle/Wz8LAw7eaokXZTTF6" target="_blank">Song Request</a>
-        <a href="https://kylethemusicguy.github.io/kylesgamelauncher/" target="_blank">Kyle's Game Launcher</a> <!--music site-->
-        <a href="https://kylethemusicguy.github.io/kylescopyrightissues/" target="_blank">!COPYRIGHT ISSUES!</a> 
+        <a href="https://kylethemusicguy.github.io/kylesgamelauncher/" target="_blank">Kyle's Game Launcher</a>
+        <a href="https://kylethemusicguy.github.io/kylescopyrightissues/" target="_blank">!COPYRIGHT ISSUES!</a>
+        <button onclick="launchRandomSong()">Random Song</button>
     </nav>
 
     <!-- Game Launcher Section -->
@@ -87,7 +67,6 @@
         <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221164/shake-it-off?token=qOG2r')">Shake It Off - Taylor Swift</button>
         <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221479/gold-digger?token=r2jW0')">Gold Digger - Kanye West</button>
         <button class="game-button" onclick="launchGame('https://whyp.it/tracks/221521/gods-country?token=b91EN')">Gods Country - Blake Shelton</button>
-        <button class="game-button" onclick="launchRandomSong()">Random Song</button>
     </div>
 
     <script>
